@@ -29,7 +29,7 @@ I downloaded VirtualBox from virtualbox.org and installed it on my computer. Thi
 
 I installed Windows Server 2019 and set up a static IP address: 10.0.2.10
 
-<img width="986" height="682" alt="image" src="https://github.com/user-attachments/assets/e9ba8993-ec11-419f-b816-3bd813f883bd" />
+<img width="989" height="689" alt="image" src="https://github.com/user-attachments/assets/02e30a89-6ef4-44e5-ab7f-2506cfd60439" />
 
 
 ### Step 3: Install Active Directory
@@ -53,7 +53,7 @@ I added the DHCP role so client computers could get IP addresses automatically:
 2. Created a scope: 10.0.2.100 - 10.0.2.200
 3. Set DNS server to: 10.0.2.10 (the domain controller)
 
-4. <img width="558" height="417" alt="image" src="https://github.com/user-attachments/assets/fa2aa006-f3cb-4739-a990-93552239a924" />
+<img width="560" height="418" alt="image" src="https://github.com/user-attachments/assets/a385db0a-2803-42ed-847a-429dc9ce1a70" />
 
 
 ### Step 5: Create Organizational Units
@@ -104,14 +104,14 @@ Then I added users to their groups:
 - mary.jones → HR_Team
 - admin.user → Domain_Admins
 
-<img width="1087" height="630" alt="image" src="https://github.com/user-attachments/assets/5a377982-c459-412b-b1d4-a8a1bcccbe46" />
+<img width="1014" height="586" alt="image" src="https://github.com/user-attachments/assets/ba35984a-0663-414d-bf2d-7145fdf9dcf9" />
 
 
 ### Step 8: Set Up Windows 10 Client Computers
 
 I created two Windows 10 VMs:
 
-<img width="1205" height="730" alt="image" src="https://github.com/user-attachments/assets/a1f4b5c6-32e9-4e14-8fc3-e5ea681a04c3" />
+<img width="1010" height="613" alt="image" src="https://github.com/user-attachments/assets/1ed4a94d-0159-404b-ae84-570629cb55ec" />
 
 
 **VM Settings:**
@@ -131,7 +131,7 @@ On each Windows 10 VM:
 4. Selected "Domain" and typed: homelab.local
 5. Entered domain admin username and password
 6. Computer restarted
-<img width="1572" height="748" alt="image" src="https://github.com/user-attachments/assets/db5b9d8a-4627-4663-81d2-a6bf98146326" />
+<img width="1011" height="480" alt="image" src="https://github.com/user-attachments/assets/04fcdde8-6bc6-4bb2-b232-8db5c8756fae" />
 
 
 Success! The computers are now part of the homelab.local domain.
@@ -147,7 +147,7 @@ I logged into PC01 using domain credentials:
 5. Set new password: NewPass123!
 6. Successfully logged in!
 
-<img width="1193" height="745" alt="image" src="https://github.com/user-attachments/assets/a996d4c3-a58c-411f-b098-c7f34cb1b1c5" />
+<img width="1013" height="629" alt="image" src="https://github.com/user-attachments/assets/12742fea-5453-4a8f-b362-ebf4a95cf6d8" />
 
 The user profile was created automatically. Everything worked!
 
@@ -166,8 +166,10 @@ The user profile was created automatically. Everything worked!
    - Enabled "Prohibit access to Control Panel and PC settings"
 5. On PC01, ran `gpupdate /force`
 
-<img width="1391" height="745" alt="image" src="https://github.com/user-attachments/assets/77606756-420e-4863-b60a-998d19caba96" />
-<img width="1211" height="753" alt="image" src="https://github.com/user-attachments/assets/5a489a65-d25f-44b5-9a8c-eca09068ea3c" />
+<img width="1016" height="548" alt="image" src="https://github.com/user-attachments/assets/292ffa85-73b3-4a21-a595-31600ee331f3" />
+
+
+<img width="1016" height="630" alt="image" src="https://github.com/user-attachments/assets/0182467d-e32e-4672-a259-bc71354cb487" />
 
 
 **Result:** Mary Jones (HR user) cannot open Control Panel anymore. Perfect for restricting non-technical users!
@@ -183,8 +185,8 @@ The user profile was created automatically. Everything worked!
    - User Configuration → Administrative Templates → Desktop → Desktop
    - Set "Desktop Wallpaper" to company image path
 4. Ran `gpupdate /force` on client computers
-<img width="1581" height="750" alt="image" src="https://github.com/user-attachments/assets/f7fb5e72-e054-4e21-867b-5c97ef946b16" />
-<img width="1572" height="751" alt="image" src="https://github.com/user-attachments/assets/03a0fb66-611d-479e-a28e-fbda1ddd112a" />
+<img width="1006" height="485" alt="image" src="https://github.com/user-attachments/assets/61d1421e-0f53-463d-a874-3bea6b675d31" />
+<img width="1005" height="483" alt="image" src="https://github.com/user-attachments/assets/bb956076-a913-4ab8-a1c0-2eb23bdb7c9e" />
 
 **Result:** All users see the company wallpaper when they log in.
 
@@ -199,7 +201,7 @@ The user profile was created automatically. Everything worked!
    - Minimum password length: 8 characters
    - Password must meet complexity requirements: Enabled
    - Maximum password age: 90 days
-<img width="1200" height="745" alt="image" src="https://github.com/user-attachments/assets/019b3da5-d480-4610-92df-4e0c336b8666" />
+<img width="1015" height="625" alt="image" src="https://github.com/user-attachments/assets/0dca9909-0649-4216-90b9-2a4fa46787bc" />
 
 **Result:** Users must create strong passwords and change them every 90 days.
 
@@ -213,7 +215,7 @@ The user profile was created automatically. Everything worked!
 3. Enabled "Interactive logon: Machine inactivity limit" → 600 seconds
 
 **Result:** Computers lock automatically if no one is using them. Good for security!
-<img width="1199" height="751" alt="image" src="https://github.com/user-attachments/assets/e2988a88-ea10-498a-a077-4b4f2e735d8f" />
+<img width="1012" height="638" alt="image" src="https://github.com/user-attachments/assets/99a43cd9-0065-4a3d-a889-b44d5ffb8e19" />
 
 ## File Permissions Setup
 
@@ -250,13 +252,13 @@ C:\SharedFiles
 4. Added specific groups (IT_Team, HR_Team, etc.)
 5. Set NTFS permissions under "Security" tab
 6. Made sure NTFS permissions matched share permissions
-<img width="1378" height="747" alt="image" src="https://github.com/user-attachments/assets/b98866d4-62be-4139-a28a-7f9c76504f57" />
+<img width="878" height="549" alt="image" src="https://github.com/user-attachments/assets/b0bd0916-1f9d-4bc3-8501-2cff5d3f5cab" />
 
 **Testing:**
 - Logged in as john.smith (IT) - Could access IT_Only folder ✓
 - Logged in as mary.jones (HR) - Could NOT access IT_Only folder ✓
 - Both could access Everyone folder ✓
-<img width="1201" height="747" alt="image" src="https://github.com/user-attachments/assets/4e56666b-12cd-46cf-972a-219e38c677d3" />
+<img width="1009" height="628" alt="image" src="https://github.com/user-attachments/assets/08bfe51b-46fc-40f0-87da-d32b856c9ac4" />
 
 ## Testing Common IT Support Scenarios
 
@@ -275,7 +277,7 @@ C:\SharedFiles
 8. User logged in and was forced to create new password
 
 **Time to resolve:** 2 minutes
-<img width="1199" height="747" alt="image" src="https://github.com/user-attachments/assets/9ff48dca-b62e-4596-a851-cffa7632ebc0" />
+<img width="1015" height="628" alt="image" src="https://github.com/user-attachments/assets/b3d21ed9-afe4-419e-aba1-8a33e376cafc" />
 
 **Skills demonstrated:** Password reset, user support, security best practices
 
@@ -295,7 +297,7 @@ C:\SharedFiles
 ```powershell
 Unlock-ADAccount -Identity john.smith
 ```
-<img width="1200" height="744" alt="image" src="https://github.com/user-attachments/assets/bfadf94d-c6c9-49b3-a5bf-2da3047f1989" />
+<img width="1013" height="625" alt="image" src="https://github.com/user-attachments/assets/7297e196-d132-48be-85c3-23da00be0d69" />
 
 **Time to resolve:** 1 minute
 
@@ -327,7 +329,7 @@ Unlock-ADAccount -Identity john.smith
 1. Checked what groups Mary is in: `HR_Team`
 2. Checked IT_Only folder permissions: Only `IT_Team` has access
 3. This is correct! HR shouldn't access IT files
-<img width="1195" height="748" alt="image" src="https://github.com/user-attachments/assets/d6193e89-0441-41c7-9d5a-710933417b31" />
+<img width="1014" height="631" alt="image" src="https://github.com/user-attachments/assets/df776d64-f057-4767-b45d-6752d2d3f867" />
 
 **Resolution:**
 Explained to user that this folder is restricted to IT department only. Not a problem - security working as designed!
@@ -336,7 +338,7 @@ If she actually NEEDED access, I would:
 1. Ask IT manager for approval
 2. Add mary.jones to IT_Team group OR
 3. Add HR_Team to folder permissions with appropriate access level
-<img width="1191" height="749" alt="image" src="https://github.com/user-attachments/assets/0658e93f-147b-41f9-9439-8f87af0e0545" />
+<img width="1016" height="642" alt="image" src="https://github.com/user-attachments/assets/3f45b63e-8b1e-4b97-bc12-c8d34df75a11" />
 
 **Time to resolve:** 3 minutes
 
@@ -377,8 +379,8 @@ Reset-ComputerMachinePassword -Server DC01 -Credential HOMELAB\Administrator
    - Removed all other permissions
 4. Created shortcut in user's Group Policy mapped drives
 5. Tested access with Finance user account
-<img width="1191" height="750" alt="image" src="https://github.com/user-attachments/assets/57fb2e35-4891-4a9a-a3c6-ae5c2ae5a276" />
-<img width="1194" height="749" alt="image" src="https://github.com/user-attachments/assets/002dad18-11f1-490a-94fb-0e75824ddb60" />
+<img width="1016" height="639" alt="image" src="https://github.com/user-attachments/assets/da5142c8-c0ae-45c0-8f6c-c1ff48a75a98" />
+<img width="1019" height="637" alt="image" src="https://github.com/user-attachments/assets/341e804a-a123-4455-b980-e11bb0f61c10" />
 
 **Time to complete:** 8 minutes
 
@@ -438,14 +440,14 @@ Reset-ComputerMachinePassword -Server DC01 -Credential HOMELAB\Administrator
 
 **Challenge 1:** VM wouldn't connect to domain
 - **Solution:** Checked DNS settings - client was using wrong DNS server. Changed to point to DC (10.0.2.10)
-<img width="1526" height="752" alt="image" src="https://github.com/user-attachments/assets/7ec6c5eb-9af1-461d-b321-43120b815beb" />
+<img width="1013" height="499" alt="image" src="https://github.com/user-attachments/assets/3548fd2a-6502-47d2-b3de-787cc8d283c1" />
 
 **Challenge 2:** Group Policy not applying
 - **Solution:** Ran `gpupdate /force` and restarted computer. Learned policies don't apply instantly.
 
 **Challenge 3:** NTFS permissions weren't changing
 - **Solution:** NTFS permissions were allowing inheritance from parent. Learned that this setting is configured separately.
-<img width="1202" height="755" alt="image" src="https://github.com/user-attachments/assets/ec6ad070-1ce5-448b-af12-f7a3dbb13553" />
+<img width="1015" height="634" alt="image" src="https://github.com/user-attachments/assets/2d500915-1ad5-4d48-957d-f49758ba6f14" />
 
 **Challenge 4:** Forgot DSRM password for DC
 - **Solution:** Documented all passwords in secure location. Learned importance of password management.
